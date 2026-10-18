@@ -1,0 +1,358 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#fff0f5" id="meta-theme-color">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Happy Birthday, Sudu Bolee (Kanishka)! 💖 ✨</title>
+  
+  <!-- Favicon (Romantic Pink Heart) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- BACKGROUND CANVAS -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- FLOATING QUICK CONTROLS -->
+  <aside class="floating-header-controls" id="floating-controls" aria-label="Quick site settings">
+    <button id="theme-toggle-btn" class="quick-ctrl-btn theme-btn" aria-haspopup="dialog" title="Change romantic color theme">
+      <span class="ctrl-icon">🎨</span>
+      <span class="ctrl-label">Theme</span>
+    </button>
+    <button id="music-toggle-btn" class="quick-ctrl-btn music-btn" title="Play romantic birthday melody">
+      <span class="music-icon">🎵</span>
+      <span class="ctrl-label">Melody</span>
+      <span class="music-waves"><span class="wave"></span><span class="wave"></span><span class="wave"></span></span>
+    </button>
+  </aside>
+
+  <!-- SECTION 1: HERO -->
+  <header class="hero-section" id="hero">
+    <div class="hero-content">
+      <div class="romantic-badge">
+        <span class="badge-sparkle">✨</span>
+        <span>October 26 &bull; The Day An Angel Was Born &bull; Kanishka</span>
+        <span class="badge-sparkle">✨</span>
+      </div>
+
+      <h1 class="hero-title">
+        Happy Birthday manika.., <br>
+        <span class="highlight-name" id="display-name">Kanii (Sudu Bolee)</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        "You are not just someone who came into my life. You became a beautiful part of the story I never want to forget."
+      </p>
+
+      <div class="hero-cta-wrapper">
+        <button id="open-surprise-btn" class="pulse-button">
+          <span class="btn-heart">💝</span>
+          <span class="btn-text">Open Your Surprise 💝</span>
+          <span class="btn-shine"></span>
+        </button>
+        <p class="cta-hint">Tap with love ✨ A surprise awaits you below</p>
+      </div>
+
+      <div class="scroll-down-indicator" id="scroll-indicator">
+        <span>Scroll to continue</span>
+        <div class="mouse-icon"><div class="wheel"></div></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN SURPRISE CONTENT -->
+  <main id="surprise-content" class="surprise-container">
+
+    <!-- SECTION 2: CAKE -->
+    <section class="section cake-section" id="cake-section">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="sub-heading">🎂 Make A Special Wish 🎂</span>
+          <h2 class="section-title">Blow Out Your Birthday Candles!</h2>
+          <p class="section-desc">Close your eyes, make the sweetest wish from the bottom of your heart, and tap the candles to blow them out!</p>
+        </div>
+
+        <div class="cake-stage">
+          <div class="cake-wrapper" id="cake-wrapper" title="Tap candles to blow them out!">
+            
+            <div class="candles-container" id="candles-container">
+              <div class="candle candle-1"><div class="flame" id="flame-1"><div class="flame-glow"></div></div><div class="smoke" id="smoke-1"></div><div class="wick"></div><div class="candle-stick"></div></div>
+              <div class="candle candle-2"><div class="flame" id="flame-2"><div class="flame-glow"></div></div><div class="smoke" id="smoke-2"></div><div class="wick"></div><div class="candle-stick"></div></div>
+              <div class="candle candle-3"><div class="flame" id="flame-3"><div class="flame-glow"></div></div><div class="smoke" id="smoke-3"></div><div class="wick"></div><div class="candle-stick"></div></div>
+            </div>
+
+            <div class="cake-tier cake-tier-top">
+              <div class="frosting-drips"><span></span><span></span><span></span><span></span><span></span></div>
+              <div class="berries"><span class="berry">&#x1F353;</span><span class="berry">&#x1F353;</span><span class="berry">&#x1F353;</span></div>
+            </div>
+
+            <div class="cake-tier cake-tier-middle">
+              <div class="frosting-drips"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              <div class="cake-ribbon"></div>
+            </div>
+
+            <div class="cake-tier cake-tier-bottom">
+              <div class="frosting-drips"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              <div class="cake-pearls"></div>
+            </div>
+
+            <div class="cake-plate"></div>
+          </div>
+
+          <div class="cake-controls">
+            <button id="blow-candles-btn" class="action-btn">
+              <span class="icon">🕯️💨</span> Blow Out The Candles!
+            </button>
+            <button id="mic-blow-btn" class="action-btn mic-btn" title="Blow into your phone microphone!">
+              <span class="icon">🎤🌬️</span> Blow With Mic
+            </button>
+            <button id="relight-candles-btn" class="action-btn secondary-btn" style="display: none;">
+              <span class="icon">✨🕯️</span> Relight Candles & Make Another Wish
+            </button>
+          </div>
+          <p class="mobile-tap-hint">&#x1F4A1; Mobile Tip: You can also tap directly on any flame to blow it out!</p>
+
+          <div class="wish-reveal-card" id="wish-reveal-card">
+            <div class="confetti-icon">🎉 💖 ✨</div>
+            <h3>YAY! Happy Birthday, Sudu Bolee! 🎂</h3>
+            <p>May every single dream you wished for today come true, my dearest Pancho! You deserve all the sweetest happiness, love, peace, and smiles in this entire universe! 🥺❤️</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: LETTER -->
+    <section class="section letter-section" id="letter-section">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="sub-heading">💌 Straight From My Heart 💌</span>
+          <h3 style="font-family: var(--font-sans); color: var(--gold); font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; text-align: center; margin-bottom: 15px;">✨ October 26 &bull; The Day An Angel Was Born &bull; Kanishka</h3>
+          <h2 class="section-title">A Romantic Letter For mage pancho,</h2>
+          <p class="section-desc">Words will never be enough, but here is a piece of my heart on your special day.</p>
+        </div>
+
+        <div class="letter-envelope-wrapper">
+          <div class="love-letter-card">
+            <div class="letter-stamp">
+              <span>💖</span>
+              <small>Love Post</small>
+            </div>
+
+            <div class="letter-body">
+              <p class="letter-salutation">To My Moon 🌙🤍</p>
+              <p>You are not just someone who came into my life. You became one of the most beautiful parts of my story, and I will always be grateful to have you. ❤️<br>Happy Birthday, mage Bolee! 🎂🥹❤️</p>
+              <p>May your life be filled with happiness, love, peace, and success. May all your dreams come true, and may you become the happiest version of yourself. Sometimes, I feel like I should thank your mom and dad for bringing someone as precious as you into this world. Having you in my life is truly a beautiful gift. ❤️🥰</p>
+              <p>මම දන්නේ නැහැ ඉස්සරහට අපේ ජීවිත කොහොම වෙනස් වෙයිද කියලා. ඒත් මගේ ජීවිතයට හමුවුණු ලස්සනම, හොඳම හමුවීම ඔයා. ඒක හැමදාමත් එහෙමයි, වෙනසක් වෙන්නේ නැහැ. අද ඔයාගේ උපන්දිනය දවසේ, මේ මොහොතේ, මේ තත්පරේ මට ඔයා ළඟින් ඉන්න බැරි වුණත්, my heart and my soul are always with you. 🤍</p>
+              <p>ඔයාට මතකද අපේ සිංහල සාහිත්‍ය පොතේ තිබුණු “ගඟේ සංගීතය” පාඩම? 🥹❤️<br>අපේ ජීවිතත් ගඟක් වගේ. ගඟකට ගල්පර, බාධක හමුවුණත් ඒවා මඟහරවාගෙන ඉදිරියට ගලාගෙන යනවා. අපේ ජීවිතවලටත් ප්‍රශ්න එයි, ඒත් කොච්චර බාධක ආවත් අපි එකට ඒවාට මුහුණ දෙමු, විසඳුම් හොයාගමු. ප්‍රශ්න නිසා එකිනෙකාව අතහරින්නේ නැතුව, එකිනෙකාට ශක්තියක් වෙලා ඉදිරියට යමු. මට විශ්වාසයි, අපිටත් ලස්සන දවස් උදා වෙනවා කියලා. ❤️✨</p>
+              <p>Let's build a beautiful and successful life together. Let's support each other's dreams, celebrate our achievements, and keep choosing each other even on difficult days. I want to see you grow, succeed, and live the life you've always dreamed of—with me beside you, sharing every beautiful moment.</p>
+              <p>No matter how much life changes, whenever I hear the name “Pancho,” my heart will always remember you with love. You are more than just someone I love; you are a beautiful part of my life that I will always treasure. 🥹🤍</p>
+              <p class="letter-wish">And if someone ever asks me about one of the most beautiful chapters of my life, my answer will always be:<br>
+                <span style="display: block; margin-top: 10px; font-size: 1.35rem; color: var(--deep-rose); font-family: var(--font-serif); font-weight: 700;">
+                  “It was the chapter where I had You.” 🌙❤️
+                </span>
+              </p>
+              <p>I don't just wish to see you happy today; I wish to see you happy and successful for many years to come. May we achieve our dreams together and create a beautiful life filled with love, happiness, and unforgettable memories.</p>
+              <p>The dream isn't just about having a beautiful life. It's about building that life with you. 🤍</p>
+              <div class="letter-signoff">
+                <span class="signoff-note">Forever and always yours,</span>
+                <span class="signoff-signature" id="display-signature" style="font-family: 'Dancing Script', cursive; font-size: 2.5rem; color: var(--primary-pink);">SKY 🌙❤️</span>
+              </div>
+            </div>
+            </div>
+
+            <div class="wax-seal">
+              <span>Pancho</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reasons-wrapper">
+          <h3 class="reasons-heading">6 Little Things I Adore About You, Sudu manika </h3>
+          <div class="reasons-grid">
+            <div class="reason-card"><div class="reason-icon">✨</div><h4>Your Beautiful Smile</h4><p>Your smile is one of those precious things that stays with me, lighting up my mind even on the hardest days.</p></div>
+            <div class="reason-card"><div class="reason-icon">🌸</div><h4>Your Voice & Talk</h4><p>Your voice and the way you talk bring a warmth and comfort that no words can truly describe.</p></div>
+            <div class="reason-card"><div class="reason-icon">🥺</div><h4>Your Silly Little Habits</h4><p>All those cute, funny quirks and habits that probably mean nothing to others, but mean everything to me. 🥺❤️</p></div>
+            <div class="reason-card"><div class="reason-icon">🧸</div><h4>My "Pancho"</h4><p>Whenever I hear the name "Pancho," there will always be a special place in my heart that belongs only to you.</p></div>
+            <div class="reason-card"><div class="reason-icon">☕</div><h4>All Our Tiny Moments</h4><p>Those small, simple memories between us that are woven forever into the story I never want to forget.</p></div>
+            <div class="reason-card"><div class="reason-icon">🌟</div><h4>My Sudu Bolee</h4><p>You are not just a person I love. You are a feeling I want to remember for the rest of my life. 🤍</p></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: GALLERY -->
+    <section class="section gallery-section" id="gallery-section">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="sub-heading">📸 Our Beautiful Memories 📸</span>
+          <h2 class="section-title">Moments I Never Want To Forget Manika🥺</h2>
+          <p class="section-desc">Every photo is a piece of my heart. Swipe or tap any photo to open it 💖</p>
+        </div>
+
+        <div class="gallery-toolbar">
+          <div class="gallery-view-toggle">
+            <button id="btn-swipe" class="gvt-btn gvt-active" onclick="switchGalleryView('swipe')"><span>📱</span> Swipe Story</button>
+            <button id="btn-grid"  class="gvt-btn"            onclick="switchGalleryView('grid')"><span>🖼️</span> All Photos</button>
+          </div>
+          <div class="gallery-counter-row" id="gallery-counter-row">
+            <button class="gal-nav-btn" id="mem-prev" aria-label="Previous">&#8249;</button>
+            <span class="gal-counter" id="mem-counter">1 / 59</span>
+            <button class="gal-nav-btn" id="mem-next" aria-label="Next">&#8250;</button>
+          </div>
+        </div>
+
+        <p class="swipe-hint-text" id="swipe-hint-text">👈 Swipe left or right to browse memories &bull; Tap any photo to open 💕 👉</p>
+
+        <div class="mem-carousel-wrapper" id="mem-carousel-wrapper">
+          <div class="mem-track" id="mem-track"></div>
+          <div class="mem-progress-outer"><div class="mem-progress-fill" id="mem-progress-fill"></div></div>
+        </div>
+
+        <div class="all-photos-grid" id="all-photos-grid" style="display:none"></div>
+
+        <div class="mem-lightbox" id="mem-lightbox" onclick="closeMemoryLightbox()">
+          <div class="mem-lb-inner" onclick="event.stopPropagation()">
+            <button class="mem-lb-close" onclick="closeMemoryLightbox()">✕</button>
+            <button class="mem-lb-nav mem-lb-prev" onclick="lightboxNav(-1)">&#8249;</button>
+            <button class="mem-lb-nav mem-lb-next" onclick="lightboxNav(1)">&#8250;</button>
+            <div class="mem-lb-photo-wrap">
+              <img id="mem-lb-img" src="" alt="">
+              <div class="mem-lb-floating-hearts">
+                <span>💖</span><span>💕</span><span>✨</span><span>🌸</span>
+                <span>❤️</span><span>💜</span><span>🧡</span><span>💛</span>
+              </div>
+            </div>
+            <div class="mem-lb-caption" id="mem-lb-caption"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: FINALE -->
+    <section class="section finale-section" id="finale-section">
+      <div class="container text-center">
+        
+        <div class="grand-heart-wrapper">
+          <div class="glowing-halo"></div>
+          <div class="grand-heart" id="grand-heart">❤️</div>
+          <div class="floating-orbit-sparkles">
+            <span>✨</span><span>💖</span><span>🌸</span><span>✨</span>
+          </div>
+        </div>
+
+        <div class="finale-text">
+          <h2 class="finale-title">Happy level up day, mage Boleee...❤️</h2>
+          <p style="font-weight: 700; color: var(--deep-rose); font-size: 1.15rem; letter-spacing: 1px; margin-bottom: 14px; text-transform: uppercase;">
+            ✨<br>October 26 &bull; The Day An Angel Was Born &bull; Kanishka<br>✨
+          </p>
+          <p class="finale-quote">
+            "And if someone ever asks me what one of the most beautiful chapters of my life was... <br>
+            I'll simply say, 'It was the chapter where I had you.' ❤️"
+          </p>
+        </div>
+
+        <div class="love-meter-box">
+          <p class="meter-title">Wondering how much i am loves you, Pancho?</p>
+          <button id="love-meter-btn" class="action-btn heart-btn">Tap To Measure My Love! 💖</button>
+          <div class="meter-result" id="meter-result">
+            <div class="meter-bar-container"><div class="meter-bar-fill" id="meter-bar-fill"></div></div>
+            <p class="meter-score" id="meter-score">Calculating love...</p>
+          </div>
+        </div>
+
+        <div class="finale-actions">
+            <button id="replay-btn" class="action-btn secondary-btn"><span>✨</span> Replay The Surprise</button>
+            <button id="send-kiss-btn" class="action-btn"><span>😘</span> Send Birthday Kisses to Pancho!</button>
+          </div>
+  
+          <footer class="romantic-footer">
+          <p style="font-family: var(--font-serif); font-size: 0.9rem; color: var(--text-color); line-height: 1.8; text-shadow: 0 1px 3px rgba(0,0,0,0.1); padding: 0 10px;">
+            .Forever & Always &bull; 2026.10.26 &bull; The Most Beautiful Chapter Of My Life<br>
+            <span style="font-family: var(--font-mono); font-size: 1.05rem; margin-top: 10px; margin-bottom: 10px; display: block; color: var(--text-color); font-weight: bold;">SKY -💌-&gt; MOON</span>
+            <span style="font-family: var(--font-sans); font-size: 0.85rem; color: var(--text-color); opacity: 0.9;">Designed with my all harts by Sky for his lovely moon. This is our digital sky, hew☁️🌙 ✨</span>
+          </p>
+        </footer>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- THEME SELECTION MODAL -->
+    <div id="theme-modal" class="theme-modal" aria-hidden="true">
+      <div class="theme-backdrop" id="theme-backdrop"></div>
+      <div class="theme-sheet">
+        <div class="sheet-drag-handle"></div>
+        <div class="sheet-title-row">
+          <h3 style="font-family: var(--font-serif); color: var(--deep-rose);">🎨 Choose a Theme</h3>
+          <button id="theme-close-btn" class="close-btn" style="background: none; border: none; font-size: 2rem; color: var(--text-color); cursor: pointer;">&times;</button>
+        </div>
+        <div class="theme-options-grid" style="display: grid; gap: 12px; margin-top: 15px;">
+          <button class="theme-option-card active" data-theme="rose" title="Rose Petals & Blush">
+            <div class="theme-swatch swatch-rose"><span class="swatch-bubble b1"></span><span class="swatch-bubble b2"></span></div>
+            <div class="theme-info"><span class="theme-name">💖 Rose Petals</span><span class="theme-desc">Sweet Pink & Deep Rose</span></div>
+          </button>
+          <button class="theme-option-card" data-theme="lavender" title="Lavender Moonlight">
+            <div class="theme-swatch swatch-lavender"><span class="swatch-bubble b1"></span><span class="swatch-bubble b2"></span></div>
+            <div class="theme-info"><span class="theme-name">💜 Lavender Moonlight</span><span class="theme-desc">Dreamy Lilac & Twilight Glow</span></div>
+          </button>
+          <button class="theme-option-card" data-theme="sunset" title="Sunset Romance">
+            <div class="theme-swatch swatch-sunset"><span class="swatch-bubble b1"></span><span class="swatch-bubble b2"></span></div>
+            <div class="theme-info"><span class="theme-name">🌅 Sunset Romance</span><span class="theme-desc">Warm Golden Peach</span></div>
+          </button>
+          <button class="theme-option-card" data-theme="midnight" title="Midnight Starlight">
+            <div class="theme-swatch swatch-midnight"><span class="swatch-bubble b1"></span><span class="swatch-bubble b2"></span></div>
+            <div class="theme-info"><span class="theme-name">🌌 Midnight Starlight</span><span class="theme-desc">Velvet Dark Mode</span></div>
+          </button>
+          <button class="theme-option-card" data-theme="ruby" title="Ruby Passion">
+            <div class="theme-swatch swatch-ruby"><span class="swatch-bubble b1"></span><span class="swatch-bubble b2"></span></div>
+            <div class="theme-info"><span class="theme-name">❤️ Ruby Passion</span><span class="theme-desc">Crimson Wine & Rose</span></div>
+          </button>
+          <button class="theme-option-card" data-theme="ocean" title="Ocean Serenade">
+            <div class="theme-swatch swatch-ocean"><span class="swatch-bubble b1"></span><span class="swatch-bubble b2"></span></div>
+            <div class="theme-info"><span class="theme-name">🌊 Ocean Serenade</span><span class="theme-desc">Aqua Breeze & Sky Blue</span></div>
+          </button>
+          <button class="theme-option-card" data-theme="skymoon" title="Moonlit Sky & Stars">
+            <div class="theme-swatch swatch-skymoon">
+              <span class="swatch-bubble b1" style="background:rgba(255,209,102,0.55);width:14px;height:14px;top:5px;left:8px;border-radius:50%;"></span>
+              <span class="swatch-bubble b2" style="background:rgba(255,255,255,0.7);width:5px;height:5px;bottom:8px;right:10px;border-radius:50%;"></span>
+            </div>
+            <div class="theme-info"><span class="theme-name">✨ Moonlit Sky & Stars</span><span class="theme-desc">Deep Night Sky</span></div>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- MOBILE BOTTOM NAV -->
+  <nav class="mobile-bottom-nav" id="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <a href="#hero" class="nav-item active" data-target="hero"><span class="nav-icon">✨</span><span class="nav-label">Intro</span></a>
+    <a href="#cake-section" class="nav-item" data-target="cake-section"><span class="nav-icon">🎂</span><span class="nav-label">Cake</span></a>
+    <a href="#letter-section" class="nav-item" data-target="letter-section"><span class="nav-icon">💌</span><span class="nav-label">Letter</span></a>
+    <a href="#gallery-section" class="nav-item" data-target="gallery-section"><span class="nav-icon">📸</span><span class="nav-label">Photos</span></a>
+    <a href="#finale-section" class="nav-item" data-target="finale-section"><span class="nav-icon">💖</span><span class="nav-label">Finale</span></a>
+  </nav>
+
+  <div class="mobile-toast" id="mobile-toast" aria-live="polite"></div>
+  <div id="tap-effects-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
